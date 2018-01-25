@@ -21,6 +21,21 @@ namespace Nustache.SqlClr
 	for(var i = 1; i<=16; i+=1)
 	{
 #>
+		/// <summary>
+        /// Renders the given Mustache template with the name/value arguments assembled into a parameter data object.
+		/// All arguments must have string-value of length < 2000, longer string-values have not been tested.
+        /// </summary>
+        /// <param name="template">A Mustache template.</param>
+<#
+		for(var j = 1; j<=i; j+=1)
+		{
+#>
+        /// <param name="name<#= j #>">The name of template data parameter <#= j #>.</param>
+        /// <param name="value<#= j #>">The value of template data parameter <#= j #>.</param>
+<#
+		}
+#>
+        /// <returns>The rendered template with all parameters replaced.</returns> 
         [SqlFunction(DataAccess = DataAccessKind.None, IsDeterministic = true)]
         [return: SqlFacet(MaxSize = -1, IsNullable = true)]
         public static SqlString  RenderTemplateWithStrings<#= i #>(

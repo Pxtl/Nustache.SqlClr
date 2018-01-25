@@ -9,6 +9,14 @@ namespace Nustache.SqlClr
 {
 	public static partial class UserDefinedFunctions
 	{
+		/// <summary>
+        /// Renders the given Mustache template with the name/value arguments assembled into a parameter data object.
+		/// All arguments must have string-value of length < 2000, longer string-values have not been tested.
+        /// </summary>
+        /// <param name="template">A Mustache template.</param>
+        /// <param name="name1">The name of template data parameter 1.</param>
+        /// <param name="value1">The value of template data parameter 1.</param>
+        /// <returns>The rendered template with all parameters replaced.</returns> 
         [SqlFunction(DataAccess = DataAccessKind.None, IsDeterministic = true)]
         [return: SqlFacet(MaxSize = -1, IsNullable = true)]
         public static SqlString  RenderTemplateWithStrings1(
@@ -27,6 +35,16 @@ namespace Nustache.SqlClr
             return Render.StringToString(template.Value, paramDict);
         }
 
+		/// <summary>
+        /// Renders the given Mustache template with the name/value arguments assembled into a parameter data object.
+		/// All arguments must have string-value of length < 2000, longer string-values have not been tested.
+        /// </summary>
+        /// <param name="template">A Mustache template.</param>
+        /// <param name="name1">The name of template data parameter 1.</param>
+        /// <param name="value1">The value of template data parameter 1.</param>
+        /// <param name="name2">The name of template data parameter 2.</param>
+        /// <param name="value2">The value of template data parameter 2.</param>
+        /// <returns>The rendered template with all parameters replaced.</returns> 
         [SqlFunction(DataAccess = DataAccessKind.None, IsDeterministic = true)]
         [return: SqlFacet(MaxSize = -1, IsNullable = true)]
         public static SqlString  RenderTemplateWithStrings2(
@@ -48,6 +66,18 @@ namespace Nustache.SqlClr
             return Render.StringToString(template.Value, paramDict);
         }
 
+		/// <summary>
+        /// Renders the given Mustache template with the name/value arguments assembled into a parameter data object.
+		/// All arguments must have string-value of length < 2000, longer string-values have not been tested.
+        /// </summary>
+        /// <param name="template">A Mustache template.</param>
+        /// <param name="name1">The name of template data parameter 1.</param>
+        /// <param name="value1">The value of template data parameter 1.</param>
+        /// <param name="name2">The name of template data parameter 2.</param>
+        /// <param name="value2">The value of template data parameter 2.</param>
+        /// <param name="name3">The name of template data parameter 3.</param>
+        /// <param name="value3">The value of template data parameter 3.</param>
+        /// <returns>The rendered template with all parameters replaced.</returns> 
         [SqlFunction(DataAccess = DataAccessKind.None, IsDeterministic = true)]
         [return: SqlFacet(MaxSize = -1, IsNullable = true)]
         public static SqlString  RenderTemplateWithStrings3(
@@ -72,6 +102,20 @@ namespace Nustache.SqlClr
             return Render.StringToString(template.Value, paramDict);
         }
 
+		/// <summary>
+        /// Renders the given Mustache template with the name/value arguments assembled into a parameter data object.
+		/// All arguments must have string-value of length < 2000, longer string-values have not been tested.
+        /// </summary>
+        /// <param name="template">A Mustache template.</param>
+        /// <param name="name1">The name of template data parameter 1.</param>
+        /// <param name="value1">The value of template data parameter 1.</param>
+        /// <param name="name2">The name of template data parameter 2.</param>
+        /// <param name="value2">The value of template data parameter 2.</param>
+        /// <param name="name3">The name of template data parameter 3.</param>
+        /// <param name="value3">The value of template data parameter 3.</param>
+        /// <param name="name4">The name of template data parameter 4.</param>
+        /// <param name="value4">The value of template data parameter 4.</param>
+        /// <returns>The rendered template with all parameters replaced.</returns> 
         [SqlFunction(DataAccess = DataAccessKind.None, IsDeterministic = true)]
         [return: SqlFacet(MaxSize = -1, IsNullable = true)]
         public static SqlString  RenderTemplateWithStrings4(
@@ -99,6 +143,22 @@ namespace Nustache.SqlClr
             return Render.StringToString(template.Value, paramDict);
         }
 
+		/// <summary>
+        /// Renders the given Mustache template with the name/value arguments assembled into a parameter data object.
+		/// All arguments must have string-value of length < 2000, longer string-values have not been tested.
+        /// </summary>
+        /// <param name="template">A Mustache template.</param>
+        /// <param name="name1">The name of template data parameter 1.</param>
+        /// <param name="value1">The value of template data parameter 1.</param>
+        /// <param name="name2">The name of template data parameter 2.</param>
+        /// <param name="value2">The value of template data parameter 2.</param>
+        /// <param name="name3">The name of template data parameter 3.</param>
+        /// <param name="value3">The value of template data parameter 3.</param>
+        /// <param name="name4">The name of template data parameter 4.</param>
+        /// <param name="value4">The value of template data parameter 4.</param>
+        /// <param name="name5">The name of template data parameter 5.</param>
+        /// <param name="value5">The value of template data parameter 5.</param>
+        /// <returns>The rendered template with all parameters replaced.</returns> 
         [SqlFunction(DataAccess = DataAccessKind.None, IsDeterministic = true)]
         [return: SqlFacet(MaxSize = -1, IsNullable = true)]
         public static SqlString  RenderTemplateWithStrings5(
@@ -129,6 +189,24 @@ namespace Nustache.SqlClr
             return Render.StringToString(template.Value, paramDict);
         }
 
+		/// <summary>
+        /// Renders the given Mustache template with the name/value arguments assembled into a parameter data object.
+		/// All arguments must have string-value of length < 2000, longer string-values have not been tested.
+        /// </summary>
+        /// <param name="template">A Mustache template.</param>
+        /// <param name="name1">The name of template data parameter 1.</param>
+        /// <param name="value1">The value of template data parameter 1.</param>
+        /// <param name="name2">The name of template data parameter 2.</param>
+        /// <param name="value2">The value of template data parameter 2.</param>
+        /// <param name="name3">The name of template data parameter 3.</param>
+        /// <param name="value3">The value of template data parameter 3.</param>
+        /// <param name="name4">The name of template data parameter 4.</param>
+        /// <param name="value4">The value of template data parameter 4.</param>
+        /// <param name="name5">The name of template data parameter 5.</param>
+        /// <param name="value5">The value of template data parameter 5.</param>
+        /// <param name="name6">The name of template data parameter 6.</param>
+        /// <param name="value6">The value of template data parameter 6.</param>
+        /// <returns>The rendered template with all parameters replaced.</returns> 
         [SqlFunction(DataAccess = DataAccessKind.None, IsDeterministic = true)]
         [return: SqlFacet(MaxSize = -1, IsNullable = true)]
         public static SqlString  RenderTemplateWithStrings6(
@@ -162,6 +240,26 @@ namespace Nustache.SqlClr
             return Render.StringToString(template.Value, paramDict);
         }
 
+		/// <summary>
+        /// Renders the given Mustache template with the name/value arguments assembled into a parameter data object.
+		/// All arguments must have string-value of length < 2000, longer string-values have not been tested.
+        /// </summary>
+        /// <param name="template">A Mustache template.</param>
+        /// <param name="name1">The name of template data parameter 1.</param>
+        /// <param name="value1">The value of template data parameter 1.</param>
+        /// <param name="name2">The name of template data parameter 2.</param>
+        /// <param name="value2">The value of template data parameter 2.</param>
+        /// <param name="name3">The name of template data parameter 3.</param>
+        /// <param name="value3">The value of template data parameter 3.</param>
+        /// <param name="name4">The name of template data parameter 4.</param>
+        /// <param name="value4">The value of template data parameter 4.</param>
+        /// <param name="name5">The name of template data parameter 5.</param>
+        /// <param name="value5">The value of template data parameter 5.</param>
+        /// <param name="name6">The name of template data parameter 6.</param>
+        /// <param name="value6">The value of template data parameter 6.</param>
+        /// <param name="name7">The name of template data parameter 7.</param>
+        /// <param name="value7">The value of template data parameter 7.</param>
+        /// <returns>The rendered template with all parameters replaced.</returns> 
         [SqlFunction(DataAccess = DataAccessKind.None, IsDeterministic = true)]
         [return: SqlFacet(MaxSize = -1, IsNullable = true)]
         public static SqlString  RenderTemplateWithStrings7(
@@ -198,6 +296,28 @@ namespace Nustache.SqlClr
             return Render.StringToString(template.Value, paramDict);
         }
 
+		/// <summary>
+        /// Renders the given Mustache template with the name/value arguments assembled into a parameter data object.
+		/// All arguments must have string-value of length < 2000, longer string-values have not been tested.
+        /// </summary>
+        /// <param name="template">A Mustache template.</param>
+        /// <param name="name1">The name of template data parameter 1.</param>
+        /// <param name="value1">The value of template data parameter 1.</param>
+        /// <param name="name2">The name of template data parameter 2.</param>
+        /// <param name="value2">The value of template data parameter 2.</param>
+        /// <param name="name3">The name of template data parameter 3.</param>
+        /// <param name="value3">The value of template data parameter 3.</param>
+        /// <param name="name4">The name of template data parameter 4.</param>
+        /// <param name="value4">The value of template data parameter 4.</param>
+        /// <param name="name5">The name of template data parameter 5.</param>
+        /// <param name="value5">The value of template data parameter 5.</param>
+        /// <param name="name6">The name of template data parameter 6.</param>
+        /// <param name="value6">The value of template data parameter 6.</param>
+        /// <param name="name7">The name of template data parameter 7.</param>
+        /// <param name="value7">The value of template data parameter 7.</param>
+        /// <param name="name8">The name of template data parameter 8.</param>
+        /// <param name="value8">The value of template data parameter 8.</param>
+        /// <returns>The rendered template with all parameters replaced.</returns> 
         [SqlFunction(DataAccess = DataAccessKind.None, IsDeterministic = true)]
         [return: SqlFacet(MaxSize = -1, IsNullable = true)]
         public static SqlString  RenderTemplateWithStrings8(
@@ -237,6 +357,30 @@ namespace Nustache.SqlClr
             return Render.StringToString(template.Value, paramDict);
         }
 
+		/// <summary>
+        /// Renders the given Mustache template with the name/value arguments assembled into a parameter data object.
+		/// All arguments must have string-value of length < 2000, longer string-values have not been tested.
+        /// </summary>
+        /// <param name="template">A Mustache template.</param>
+        /// <param name="name1">The name of template data parameter 1.</param>
+        /// <param name="value1">The value of template data parameter 1.</param>
+        /// <param name="name2">The name of template data parameter 2.</param>
+        /// <param name="value2">The value of template data parameter 2.</param>
+        /// <param name="name3">The name of template data parameter 3.</param>
+        /// <param name="value3">The value of template data parameter 3.</param>
+        /// <param name="name4">The name of template data parameter 4.</param>
+        /// <param name="value4">The value of template data parameter 4.</param>
+        /// <param name="name5">The name of template data parameter 5.</param>
+        /// <param name="value5">The value of template data parameter 5.</param>
+        /// <param name="name6">The name of template data parameter 6.</param>
+        /// <param name="value6">The value of template data parameter 6.</param>
+        /// <param name="name7">The name of template data parameter 7.</param>
+        /// <param name="value7">The value of template data parameter 7.</param>
+        /// <param name="name8">The name of template data parameter 8.</param>
+        /// <param name="value8">The value of template data parameter 8.</param>
+        /// <param name="name9">The name of template data parameter 9.</param>
+        /// <param name="value9">The value of template data parameter 9.</param>
+        /// <returns>The rendered template with all parameters replaced.</returns> 
         [SqlFunction(DataAccess = DataAccessKind.None, IsDeterministic = true)]
         [return: SqlFacet(MaxSize = -1, IsNullable = true)]
         public static SqlString  RenderTemplateWithStrings9(
@@ -279,6 +423,32 @@ namespace Nustache.SqlClr
             return Render.StringToString(template.Value, paramDict);
         }
 
+		/// <summary>
+        /// Renders the given Mustache template with the name/value arguments assembled into a parameter data object.
+		/// All arguments must have string-value of length < 2000, longer string-values have not been tested.
+        /// </summary>
+        /// <param name="template">A Mustache template.</param>
+        /// <param name="name1">The name of template data parameter 1.</param>
+        /// <param name="value1">The value of template data parameter 1.</param>
+        /// <param name="name2">The name of template data parameter 2.</param>
+        /// <param name="value2">The value of template data parameter 2.</param>
+        /// <param name="name3">The name of template data parameter 3.</param>
+        /// <param name="value3">The value of template data parameter 3.</param>
+        /// <param name="name4">The name of template data parameter 4.</param>
+        /// <param name="value4">The value of template data parameter 4.</param>
+        /// <param name="name5">The name of template data parameter 5.</param>
+        /// <param name="value5">The value of template data parameter 5.</param>
+        /// <param name="name6">The name of template data parameter 6.</param>
+        /// <param name="value6">The value of template data parameter 6.</param>
+        /// <param name="name7">The name of template data parameter 7.</param>
+        /// <param name="value7">The value of template data parameter 7.</param>
+        /// <param name="name8">The name of template data parameter 8.</param>
+        /// <param name="value8">The value of template data parameter 8.</param>
+        /// <param name="name9">The name of template data parameter 9.</param>
+        /// <param name="value9">The value of template data parameter 9.</param>
+        /// <param name="name10">The name of template data parameter 10.</param>
+        /// <param name="value10">The value of template data parameter 10.</param>
+        /// <returns>The rendered template with all parameters replaced.</returns> 
         [SqlFunction(DataAccess = DataAccessKind.None, IsDeterministic = true)]
         [return: SqlFacet(MaxSize = -1, IsNullable = true)]
         public static SqlString  RenderTemplateWithStrings10(
@@ -324,6 +494,34 @@ namespace Nustache.SqlClr
             return Render.StringToString(template.Value, paramDict);
         }
 
+		/// <summary>
+        /// Renders the given Mustache template with the name/value arguments assembled into a parameter data object.
+		/// All arguments must have string-value of length < 2000, longer string-values have not been tested.
+        /// </summary>
+        /// <param name="template">A Mustache template.</param>
+        /// <param name="name1">The name of template data parameter 1.</param>
+        /// <param name="value1">The value of template data parameter 1.</param>
+        /// <param name="name2">The name of template data parameter 2.</param>
+        /// <param name="value2">The value of template data parameter 2.</param>
+        /// <param name="name3">The name of template data parameter 3.</param>
+        /// <param name="value3">The value of template data parameter 3.</param>
+        /// <param name="name4">The name of template data parameter 4.</param>
+        /// <param name="value4">The value of template data parameter 4.</param>
+        /// <param name="name5">The name of template data parameter 5.</param>
+        /// <param name="value5">The value of template data parameter 5.</param>
+        /// <param name="name6">The name of template data parameter 6.</param>
+        /// <param name="value6">The value of template data parameter 6.</param>
+        /// <param name="name7">The name of template data parameter 7.</param>
+        /// <param name="value7">The value of template data parameter 7.</param>
+        /// <param name="name8">The name of template data parameter 8.</param>
+        /// <param name="value8">The value of template data parameter 8.</param>
+        /// <param name="name9">The name of template data parameter 9.</param>
+        /// <param name="value9">The value of template data parameter 9.</param>
+        /// <param name="name10">The name of template data parameter 10.</param>
+        /// <param name="value10">The value of template data parameter 10.</param>
+        /// <param name="name11">The name of template data parameter 11.</param>
+        /// <param name="value11">The value of template data parameter 11.</param>
+        /// <returns>The rendered template with all parameters replaced.</returns> 
         [SqlFunction(DataAccess = DataAccessKind.None, IsDeterministic = true)]
         [return: SqlFacet(MaxSize = -1, IsNullable = true)]
         public static SqlString  RenderTemplateWithStrings11(
@@ -372,6 +570,36 @@ namespace Nustache.SqlClr
             return Render.StringToString(template.Value, paramDict);
         }
 
+		/// <summary>
+        /// Renders the given Mustache template with the name/value arguments assembled into a parameter data object.
+		/// All arguments must have string-value of length < 2000, longer string-values have not been tested.
+        /// </summary>
+        /// <param name="template">A Mustache template.</param>
+        /// <param name="name1">The name of template data parameter 1.</param>
+        /// <param name="value1">The value of template data parameter 1.</param>
+        /// <param name="name2">The name of template data parameter 2.</param>
+        /// <param name="value2">The value of template data parameter 2.</param>
+        /// <param name="name3">The name of template data parameter 3.</param>
+        /// <param name="value3">The value of template data parameter 3.</param>
+        /// <param name="name4">The name of template data parameter 4.</param>
+        /// <param name="value4">The value of template data parameter 4.</param>
+        /// <param name="name5">The name of template data parameter 5.</param>
+        /// <param name="value5">The value of template data parameter 5.</param>
+        /// <param name="name6">The name of template data parameter 6.</param>
+        /// <param name="value6">The value of template data parameter 6.</param>
+        /// <param name="name7">The name of template data parameter 7.</param>
+        /// <param name="value7">The value of template data parameter 7.</param>
+        /// <param name="name8">The name of template data parameter 8.</param>
+        /// <param name="value8">The value of template data parameter 8.</param>
+        /// <param name="name9">The name of template data parameter 9.</param>
+        /// <param name="value9">The value of template data parameter 9.</param>
+        /// <param name="name10">The name of template data parameter 10.</param>
+        /// <param name="value10">The value of template data parameter 10.</param>
+        /// <param name="name11">The name of template data parameter 11.</param>
+        /// <param name="value11">The value of template data parameter 11.</param>
+        /// <param name="name12">The name of template data parameter 12.</param>
+        /// <param name="value12">The value of template data parameter 12.</param>
+        /// <returns>The rendered template with all parameters replaced.</returns> 
         [SqlFunction(DataAccess = DataAccessKind.None, IsDeterministic = true)]
         [return: SqlFacet(MaxSize = -1, IsNullable = true)]
         public static SqlString  RenderTemplateWithStrings12(
@@ -423,6 +651,38 @@ namespace Nustache.SqlClr
             return Render.StringToString(template.Value, paramDict);
         }
 
+		/// <summary>
+        /// Renders the given Mustache template with the name/value arguments assembled into a parameter data object.
+		/// All arguments must have string-value of length < 2000, longer string-values have not been tested.
+        /// </summary>
+        /// <param name="template">A Mustache template.</param>
+        /// <param name="name1">The name of template data parameter 1.</param>
+        /// <param name="value1">The value of template data parameter 1.</param>
+        /// <param name="name2">The name of template data parameter 2.</param>
+        /// <param name="value2">The value of template data parameter 2.</param>
+        /// <param name="name3">The name of template data parameter 3.</param>
+        /// <param name="value3">The value of template data parameter 3.</param>
+        /// <param name="name4">The name of template data parameter 4.</param>
+        /// <param name="value4">The value of template data parameter 4.</param>
+        /// <param name="name5">The name of template data parameter 5.</param>
+        /// <param name="value5">The value of template data parameter 5.</param>
+        /// <param name="name6">The name of template data parameter 6.</param>
+        /// <param name="value6">The value of template data parameter 6.</param>
+        /// <param name="name7">The name of template data parameter 7.</param>
+        /// <param name="value7">The value of template data parameter 7.</param>
+        /// <param name="name8">The name of template data parameter 8.</param>
+        /// <param name="value8">The value of template data parameter 8.</param>
+        /// <param name="name9">The name of template data parameter 9.</param>
+        /// <param name="value9">The value of template data parameter 9.</param>
+        /// <param name="name10">The name of template data parameter 10.</param>
+        /// <param name="value10">The value of template data parameter 10.</param>
+        /// <param name="name11">The name of template data parameter 11.</param>
+        /// <param name="value11">The value of template data parameter 11.</param>
+        /// <param name="name12">The name of template data parameter 12.</param>
+        /// <param name="value12">The value of template data parameter 12.</param>
+        /// <param name="name13">The name of template data parameter 13.</param>
+        /// <param name="value13">The value of template data parameter 13.</param>
+        /// <returns>The rendered template with all parameters replaced.</returns> 
         [SqlFunction(DataAccess = DataAccessKind.None, IsDeterministic = true)]
         [return: SqlFacet(MaxSize = -1, IsNullable = true)]
         public static SqlString  RenderTemplateWithStrings13(
@@ -477,6 +737,40 @@ namespace Nustache.SqlClr
             return Render.StringToString(template.Value, paramDict);
         }
 
+		/// <summary>
+        /// Renders the given Mustache template with the name/value arguments assembled into a parameter data object.
+		/// All arguments must have string-value of length < 2000, longer string-values have not been tested.
+        /// </summary>
+        /// <param name="template">A Mustache template.</param>
+        /// <param name="name1">The name of template data parameter 1.</param>
+        /// <param name="value1">The value of template data parameter 1.</param>
+        /// <param name="name2">The name of template data parameter 2.</param>
+        /// <param name="value2">The value of template data parameter 2.</param>
+        /// <param name="name3">The name of template data parameter 3.</param>
+        /// <param name="value3">The value of template data parameter 3.</param>
+        /// <param name="name4">The name of template data parameter 4.</param>
+        /// <param name="value4">The value of template data parameter 4.</param>
+        /// <param name="name5">The name of template data parameter 5.</param>
+        /// <param name="value5">The value of template data parameter 5.</param>
+        /// <param name="name6">The name of template data parameter 6.</param>
+        /// <param name="value6">The value of template data parameter 6.</param>
+        /// <param name="name7">The name of template data parameter 7.</param>
+        /// <param name="value7">The value of template data parameter 7.</param>
+        /// <param name="name8">The name of template data parameter 8.</param>
+        /// <param name="value8">The value of template data parameter 8.</param>
+        /// <param name="name9">The name of template data parameter 9.</param>
+        /// <param name="value9">The value of template data parameter 9.</param>
+        /// <param name="name10">The name of template data parameter 10.</param>
+        /// <param name="value10">The value of template data parameter 10.</param>
+        /// <param name="name11">The name of template data parameter 11.</param>
+        /// <param name="value11">The value of template data parameter 11.</param>
+        /// <param name="name12">The name of template data parameter 12.</param>
+        /// <param name="value12">The value of template data parameter 12.</param>
+        /// <param name="name13">The name of template data parameter 13.</param>
+        /// <param name="value13">The value of template data parameter 13.</param>
+        /// <param name="name14">The name of template data parameter 14.</param>
+        /// <param name="value14">The value of template data parameter 14.</param>
+        /// <returns>The rendered template with all parameters replaced.</returns> 
         [SqlFunction(DataAccess = DataAccessKind.None, IsDeterministic = true)]
         [return: SqlFacet(MaxSize = -1, IsNullable = true)]
         public static SqlString  RenderTemplateWithStrings14(
@@ -534,6 +828,42 @@ namespace Nustache.SqlClr
             return Render.StringToString(template.Value, paramDict);
         }
 
+		/// <summary>
+        /// Renders the given Mustache template with the name/value arguments assembled into a parameter data object.
+		/// All arguments must have string-value of length < 2000, longer string-values have not been tested.
+        /// </summary>
+        /// <param name="template">A Mustache template.</param>
+        /// <param name="name1">The name of template data parameter 1.</param>
+        /// <param name="value1">The value of template data parameter 1.</param>
+        /// <param name="name2">The name of template data parameter 2.</param>
+        /// <param name="value2">The value of template data parameter 2.</param>
+        /// <param name="name3">The name of template data parameter 3.</param>
+        /// <param name="value3">The value of template data parameter 3.</param>
+        /// <param name="name4">The name of template data parameter 4.</param>
+        /// <param name="value4">The value of template data parameter 4.</param>
+        /// <param name="name5">The name of template data parameter 5.</param>
+        /// <param name="value5">The value of template data parameter 5.</param>
+        /// <param name="name6">The name of template data parameter 6.</param>
+        /// <param name="value6">The value of template data parameter 6.</param>
+        /// <param name="name7">The name of template data parameter 7.</param>
+        /// <param name="value7">The value of template data parameter 7.</param>
+        /// <param name="name8">The name of template data parameter 8.</param>
+        /// <param name="value8">The value of template data parameter 8.</param>
+        /// <param name="name9">The name of template data parameter 9.</param>
+        /// <param name="value9">The value of template data parameter 9.</param>
+        /// <param name="name10">The name of template data parameter 10.</param>
+        /// <param name="value10">The value of template data parameter 10.</param>
+        /// <param name="name11">The name of template data parameter 11.</param>
+        /// <param name="value11">The value of template data parameter 11.</param>
+        /// <param name="name12">The name of template data parameter 12.</param>
+        /// <param name="value12">The value of template data parameter 12.</param>
+        /// <param name="name13">The name of template data parameter 13.</param>
+        /// <param name="value13">The value of template data parameter 13.</param>
+        /// <param name="name14">The name of template data parameter 14.</param>
+        /// <param name="value14">The value of template data parameter 14.</param>
+        /// <param name="name15">The name of template data parameter 15.</param>
+        /// <param name="value15">The value of template data parameter 15.</param>
+        /// <returns>The rendered template with all parameters replaced.</returns> 
         [SqlFunction(DataAccess = DataAccessKind.None, IsDeterministic = true)]
         [return: SqlFacet(MaxSize = -1, IsNullable = true)]
         public static SqlString  RenderTemplateWithStrings15(
@@ -594,6 +924,44 @@ namespace Nustache.SqlClr
             return Render.StringToString(template.Value, paramDict);
         }
 
+		/// <summary>
+        /// Renders the given Mustache template with the name/value arguments assembled into a parameter data object.
+		/// All arguments must have string-value of length < 2000, longer string-values have not been tested.
+        /// </summary>
+        /// <param name="template">A Mustache template.</param>
+        /// <param name="name1">The name of template data parameter 1.</param>
+        /// <param name="value1">The value of template data parameter 1.</param>
+        /// <param name="name2">The name of template data parameter 2.</param>
+        /// <param name="value2">The value of template data parameter 2.</param>
+        /// <param name="name3">The name of template data parameter 3.</param>
+        /// <param name="value3">The value of template data parameter 3.</param>
+        /// <param name="name4">The name of template data parameter 4.</param>
+        /// <param name="value4">The value of template data parameter 4.</param>
+        /// <param name="name5">The name of template data parameter 5.</param>
+        /// <param name="value5">The value of template data parameter 5.</param>
+        /// <param name="name6">The name of template data parameter 6.</param>
+        /// <param name="value6">The value of template data parameter 6.</param>
+        /// <param name="name7">The name of template data parameter 7.</param>
+        /// <param name="value7">The value of template data parameter 7.</param>
+        /// <param name="name8">The name of template data parameter 8.</param>
+        /// <param name="value8">The value of template data parameter 8.</param>
+        /// <param name="name9">The name of template data parameter 9.</param>
+        /// <param name="value9">The value of template data parameter 9.</param>
+        /// <param name="name10">The name of template data parameter 10.</param>
+        /// <param name="value10">The value of template data parameter 10.</param>
+        /// <param name="name11">The name of template data parameter 11.</param>
+        /// <param name="value11">The value of template data parameter 11.</param>
+        /// <param name="name12">The name of template data parameter 12.</param>
+        /// <param name="value12">The value of template data parameter 12.</param>
+        /// <param name="name13">The name of template data parameter 13.</param>
+        /// <param name="value13">The value of template data parameter 13.</param>
+        /// <param name="name14">The name of template data parameter 14.</param>
+        /// <param name="value14">The value of template data parameter 14.</param>
+        /// <param name="name15">The name of template data parameter 15.</param>
+        /// <param name="value15">The value of template data parameter 15.</param>
+        /// <param name="name16">The name of template data parameter 16.</param>
+        /// <param name="value16">The value of template data parameter 16.</param>
+        /// <returns>The rendered template with all parameters replaced.</returns> 
         [SqlFunction(DataAccess = DataAccessKind.None, IsDeterministic = true)]
         [return: SqlFacet(MaxSize = -1, IsNullable = true)]
         public static SqlString  RenderTemplateWithStrings16(

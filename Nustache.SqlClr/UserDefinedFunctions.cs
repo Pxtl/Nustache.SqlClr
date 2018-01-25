@@ -14,8 +14,15 @@ namespace Nustache.SqlClr
     /// </summary>
     public static partial class UserDefinedFunctions
     {
+        /// <summary>
+        /// Hack workaround for the fact that SQLCLR does not allow usage of statics, but doesn't check for members of statics.
+        /// Is True if the Nustache system has already been initialized.
+        /// </summary>
         private static readonly Holder<bool> _IsInitializedHolder = new Holder<bool>(false);
 
+        /// <summary>
+        /// Initialized the Nustache library, removing components that are incompatible with the SQLCLR environment.
+        /// </summary>
         private static void InitializeNustache()
         {
             if(!_IsInitializedHolder.Value)

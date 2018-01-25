@@ -45,5 +45,10 @@ namespace Nustache.SqlClr
                 _IsInitializedHolder.Value = true;
             }
         }
+
+        public static string ToNullableString(this SqlString sqlString)
+        {
+            return sqlString.IsNull ? null : sqlString.Value;
+        }
     }
 }

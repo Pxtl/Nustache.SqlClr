@@ -37,6 +37,10 @@
     <AssemblyOriginatorKeyFile>Nustache.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PxtlCa.BigVariant.Core, Version=0.2.6599.36044, Culture=neutral, PublicKeyToken=255754798780f5e4, processorArchitecture=MSIL">
+      <HintPath>..\packages\PxtlCa.BigVariant.Core.0.2.6599.36044\lib\PxtlCa.BigVariant.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,6 +52,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Holder.cs" />
+    <Compile Include="RenderTemplateWithBigVariantsN.cs">
+      <DependentUpon>RenderTemplateWithBigVariantsN.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="RenderTemplateWithStringsN.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -64,8 +73,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Nustache.snk" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="RenderTemplateWithBigVariantsN.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RenderTemplateWithBigVariantsN.cs</LastGenOutput>
+    </Content>
     <Content Include="RenderTemplateWithStringsN.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>RenderTemplateWithStringsN.cs</LastGenOutput>

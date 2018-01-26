@@ -1,10 +1,12 @@
 ﻿using Microsoft.SqlServer.Server;
 using Nustache.Core;
+using PxtlCa.BigVariant.Core;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
+using System.Xml;
 
 namespace Nustache.SqlClr
 {
@@ -49,6 +51,25 @@ namespace Nustache.SqlClr
         public static string ToNullableString(this SqlString sqlString)
         {
             return sqlString.IsNull ? null : sqlString.Value;
+        }
+
+        public static object AsTemplateObject(this BigVariant bigVariant)
+        {
+            if (bigVariant.IsNull)
+            {
+                return null;
+            }
+
+            if(bigVariant.Type == "SqlXml")
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.LoadXml(bigVariant.AsXml.Value);
+                return doc.DocumentElement;
+            }
+            else
+            {
+                return bigVariant.AsClrObject;
+            }
         }
     }
 }

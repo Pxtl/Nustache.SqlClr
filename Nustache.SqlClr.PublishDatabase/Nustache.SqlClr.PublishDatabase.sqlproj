@@ -77,4 +77,11 @@
   <ItemGroup>
     <None Include="local.publish.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="PxtlCa.BigVariant.Core">
+      <HintPath>..\packages\PxtlCa.BigVariant.Core.0.2.6599.36044\lib\PxtlCa.BigVariant.Core.dll</HintPath>
+      <IsModelAware>True</IsModelAware>
+      <GenerateSqlClrDdl>True</GenerateSqlClrDdl>
+    </Reference>
+  </ItemGroup>
 </Project>

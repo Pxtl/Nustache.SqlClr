@@ -1,0 +1,86 @@
+﻿<#@ template debug="true" hostSpecific="true" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="System.Core" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #> 
+using Microsoft.SqlServer.Server;
+using Nustache.Core;
+using PxtlCa.BigVariant.Core;
+using System;
+using System.Collections.Generic;
+using System.Data.SqlTypes;
+using System.Linq;
+
+namespace Nustache.SqlClr
+{
+	public static partial class UserDefinedFunctions
+	{
+<#
+	for(var i = 1; i<=16; i+=1)
+	{
+#>
+		/// <summary>
+        /// Renders the given Mustache template with the name/value arguments assembled into a parameter data object.
+        /// </summary>
+        /// <param name="template">A Mustache template.  Length is effectively unbounded. Not null.</param>
+<#
+		for(var j = 1; j<=i; j+=1)
+		{
+#>
+        /// <param name="name<#= j #>">The name of template data parameter <#= j #>, max length is 2000 chars.  Not null.</param>
+        /// <param name="value<#= j #>">The value of template data parameter <#= j #>.  See PxtlCa.BigVariant documentation for details.</param>
+<#
+		}
+#>
+        /// <returns>The rendered template with all parameters replaced.</returns> 
+        [SqlFunction(DataAccess = DataAccessKind.None, IsDeterministic = true)]
+        [return: SqlFacet(MaxSize = -1, IsNullable = true)]
+        public static SqlString  RenderTemplateWithBigVariants<#= i #>(
+            [SqlFacet(MaxSize = -1)] SqlString template
+<#
+		for(var j = 1; j<=i; j+=1)
+		{
+#>
+            , [SqlFacet(MaxSize = 2000)] SqlString name<#= j #>
+            , BigVariant value<#= j #>
+<#
+		}
+#>
+        )
+        {
+			if (template.IsNull) { throw new ArgumentNullException(nameof(template)); }
+<#
+		for(var j = 1; j<=i; j+=1)
+		{
+#>
+            if (name<#= j #>.IsNull) { throw new ArgumentNullException(nameof(name<#= j #>)); }
+<#
+		}
+#>
+
+            InitializeNustache();
+
+            var paramDict = new Dictionary<string, object>()
+            {
+<#
+		for(var j = 1; j<=i; j+=1)
+		{
+#>
+                { name<#= j #>.ToNullableString(), value<#= j #>.AsTemplateObject() }<#= j == i ? "" : "," #>
+<#
+		}
+#>
+            };
+
+            return Render.StringToString(template.ToNullableString(), paramDict);
+        }
+
+<#
+    }
+#>
+	}
+}
